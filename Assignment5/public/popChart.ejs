@@ -4,18 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Population Chart</title>
-
-  <!-- Include Chart.js library -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <canvas id="populationChart" width="400" height="400"></canvas>
 
   <script>
-    // Extract JSON data from EJS template variable
     var populationData = <%- JSON.stringify(data.population) %>;
 
-    // Extract labels and data from the population array
     var years = populationData.map(function (row) {
       return row[0];
     });
@@ -23,11 +19,8 @@
     var population = populationData.map(function (row) {
       return row[1];
     });
-
-    // Get the canvas element
     var ctx = document.getElementById('populationChart').getContext('2d');
 
-    // Create the chart
     var populationChart = new Chart(ctx, {
       type: 'bar',
       data: {

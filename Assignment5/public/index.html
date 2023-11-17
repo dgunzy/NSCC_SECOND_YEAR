@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halifax Weather and Population</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/htmx.org@1.6.1/dist/htmx.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4">Halifax Weather and Population</h1>
+
+    <div class="chart-buttons d-flex justify-content-center">
+      <button type="button" class="btn btn-primary mr-2" hx-get="/tempChart" hx-target="#chartContainer" hx-trigger="click">Load Temperature Chart</button>
+      <button type="button" class="btn btn-success" hx-get="/popChart" hx-target="#chartContainer" hx-trigger="click">Load Population Chart</button>
+    </div>
+
+    <div id="chartContainer"></div>
+  </div>
+</body>
+</html>
+

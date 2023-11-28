@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+  }
+
+  .container {
+    max-width: 80%;
+    text-align: center; /* Center text within the container */
+  }
+
+  #chartContainer {
+    margin-top: 20px;
+  }
+
+  .chart-buttons {
+    margin-top: 20px;
+  }

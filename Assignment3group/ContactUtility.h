@@ -1,12 +1,13 @@
 //
 // Created by Dan Guns on 2023-11-28.
 //
-#include "Contact.h"
 #ifndef ASSIGNMENT3_CONTACTUTILITY_H
 #define ASSIGNMENT3_CONTACTUTILITY_H
+#include "Contact.h"
 class ContactUtility {
 private:
     void sortContacts(std::vector<Contact*>& contacts);
+
 public:
     void addContact(std::vector<Contact*>& contacts);
     void printContacts(std::vector<Contact*>& contacts);

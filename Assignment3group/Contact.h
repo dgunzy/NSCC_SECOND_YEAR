@@ -1,8 +1,8 @@
-//
-// Created by Dan Guns on 2023-11-28.
-//
 #include <string>
+
+
 #ifndef ASSIGNMENT3_CONTACT_H
+#define ASSIGNMENT3_CONTACT_H
 
 class Contact {
 private:
@@ -12,8 +12,8 @@ private:
     Contact(std::string* name, int age);
     void addFriend(Contact* newFriend);
     void removeFriend(std::string_view friendName);
+    friend class ContactUtility;
 };
 
-#define ASSIGNMENT3_CONTACT_H
 
 #endif //ASSIGNMENT3_CONTACT_H

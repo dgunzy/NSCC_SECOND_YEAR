@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 
 int main() {
 
@@ -20,7 +21,30 @@ int main() {
 
         switch (userOption) {
             // set up the switch to call the appropriate ContactUtility method
+            // Replace print statements with appropriate methods...
+            case 1:
+                std::cout << "Show Contacts\n";
+                std::cin >> userOption;
+                break;
+            case 2:
+                std::cout << "Add Contact\n";
+                std::cin >> userOption;
+                break;
+            case 3:
+                std::cout << "Add Friend\n";
+                std::cin >> userOption;
+                break;
+            case 4:
+                std::cout << "Print Friends\n";
+                std::cin >> userOption;
+                break;
+            case 5:
+                std::cout << "Delete Contact\n";
+                std::cin >> userOption;
+                break;
+            case 6:
+                std::cout << "Exiting Program...\n";
+                std::exit(0);
         }
-
     }
 }

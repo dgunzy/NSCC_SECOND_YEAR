@@ -1,10 +1,13 @@
 #include <iostream>
 #include <limits>
+#include "Contact.h"
+#include "ContactUtility.h"
 
 int main() {
-
+    std::vector<Contact *> contactPtrVector;
     // create the vector of Contact pointers
     // instantiate a ContactUtility object
+    ContactUtility contactUtility;
 
     int userOption {};
 
@@ -23,12 +26,10 @@ int main() {
             // set up the switch to call the appropriate ContactUtility method
             // Replace print statements with appropriate methods...
             case 1:
-                std::cout << "Show Contacts\n";
-                std::cin >> userOption;
+                contactUtility.printContacts(contactPtrVector);
                 break;
             case 2:
-                std::cout << "Add Contact\n";
-                std::cin >> userOption;
+                contactUtility.addContact(contactPtrVector);
                 break;
             case 3:
                 std::cout << "Add Friend\n";
@@ -45,6 +46,9 @@ int main() {
             case 6:
                 std::cout << "Exiting Program...\n";
                 std::exit(0);
+            default:
+                break;
+
         }
     }
 }

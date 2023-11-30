@@ -7,7 +7,7 @@
 class ContactUtility {
 private:
     void sortContacts(std::vector<Contact*>& contacts);
-
+    bool checkIfContactExists(std::vector<Contact*>& contacts, std::string_view nameToCheck);
 public:
     void addContact(std::vector<Contact*>& contacts);
     void printContacts(std::vector<Contact*>& contacts);

@@ -32,16 +32,13 @@ int main() {
                 contactUtility.addContact(contactPtrVector);
                 break;
             case 3:
-                std::cout << "Add Friend\n";
-                std::cin >> userOption;
+                contactUtility.addFriend(contactPtrVector);
                 break;
             case 4:
-                std::cout << "Print Friends\n";
-                std::cin >> userOption;
+                contactUtility.printFriends(contactPtrVector);
                 break;
             case 5:
-                std::cout << "Delete Contact\n";
-                std::cin >> userOption;
+                contactUtility.deleteContact(contactPtrVector);
                 break;
             case 6:
                 std::cout << "Exiting Program...\n";
@@ -52,3 +49,4 @@ int main() {
         }
     }
 }
+
